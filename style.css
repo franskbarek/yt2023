@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+}
+
+.container .containerImages {
+  width: 40rem;
+  height: 40rem;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.6);
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.container .containerEachImage {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+}
+
+.containerEachImage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.container .containerDotIcons {
+  position: absolute;
+  left: 45%;
+  bottom: 0%;
+}
+
+.container .containerDotIcons .dotIcon {
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.dotIcon:hover {
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
