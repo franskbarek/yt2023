@@ -1,0 +1,48 @@
+.wrapper-content {
+  margin: 10% 15%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+img {
+  width: 35rem;
+  height: auto;
+}
+
+p {
+  font-style: oblique;
+  font-size: 18px;
+}
+
+#toggle-button {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  right: 16%;
+  top: 2%;
+  border: 2px solid;
+  border-radius: 15px;
+}
+
+#toggle-button:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 1px;
+  top: 1px;
+  border: 2px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#toggle-button.active:before {
+  left: 24px;
+  background: white;
+}
+
+body.night {
+  background: black;
+  color: white;
+}
