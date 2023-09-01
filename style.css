@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#680049, #000);
+}
+
+.card-container {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card-container .poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-container .poster::before {
+  content: "";
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #2e0020 55%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card-container:hover .poster::before {
+  bottom: 0px;
+}
+
+.card-container .poster img {
+  width: 100%;
+}
+
+.card-container:hover .poster img {
+  transform: translateY(-50px);
+  filter: blur(5px);
+}
+
+.card-container .details {
+  position: absolute;
+  bottom: -170px;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.card-container:hover .details {
+  bottom: 0px;
+}
+
+.card-container .details .logo {
+  max-width: 250px;
+  margin-left: -20px;
+  margin-bottom: -50px;
+}
+
+.card-container .details h3 {
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.card-container .details .rating {
+  position: relative;
+  padding: 5px 0;
+}
+
+.card-container .details .rating .fa-star {
+  color: #f7f406;
+  font-size: 1em;
+}
+
+.card-container .details .rating span {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.card-container .details .tags {
+  position: relative;
+  margin-top: 5px;
+}
+
+.card-container .details .tags span {
+  padding: 2px 4px;
+  color: #fff;
+  background: #3703f5;
+  border-radius: 4px;
+}
+
+.card-container .details .tags span:nth-child(2) {
+  background: #fa2c2c;
+}
+
+.card-container .details .desc {
+  color: #fff;
+  margin-top: 20px;
+}
+
+.card-container .details .star {
+  position: relative;
+}
+
+.card-container .details .star h4 {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.card-container .details .star ul {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.card-container .details .star ul li {
+  list-style: none;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 50%;
+  /* display: flex; */
+  border: 2px solid #fff;
+}
+
+.card-container .details .star ul li img {
+  max-width: 100%;
+}
