@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.navigation-container {
+  position: relative;
+  width: 400px;
+  height: 60px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.navigation-container ul {
+  display: flex;
+  width: 350px;
+}
+
+.navigation-container ul li {
+  list-style: none;
+  position: relative;
+  width: 70px;
+  height: 60px;
+  z-index: 2;
+}
+
+.navigation-container ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navigation-container ul li a .icon {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  line-height: 65px;
+  border-radius: 50%;
+  color: #979797;
+  font-size: 1.5em;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.navigation-container ul li.active a .icon {
+  background: #2196f3;
+  color: #fff;
+  transform: translateY(-27px);
+  transition-delay: 0.25s;
+}
+
+.navigation-container ul li a .icon::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2196f3;
+  border-radius: 50%;
+  filter: blur(5px);
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.navigation-container ul li.active a .icon::before {
+  opacity: 0.5;
+  transition-delay: 0.25s;
+}
+
+.indicator-button {
+  position: absolute;
+  top: -35px;
+  width: 70px;
+  height: 70px;
+  background: #333;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.indicator-button::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 18px #333;
+}
+
+.indicator-button::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 18px #333;
+}
+
+.navigation-container ul li:nth-child(1).active ~ .indicator-button {
+  transform: translateX(calc(70px * 0));
+}
+.navigation-container ul li:nth-child(2).active ~ .indicator-button {
+  transform: translateX(calc(70px * 1));
+}
+.navigation-container ul li:nth-child(3).active ~ .indicator-button {
+  transform: translateX(calc(70px * 2));
+}
+.navigation-container ul li:nth-child(4).active ~ .indicator-button {
+  transform: translateX(calc(70px * 3));
+}
+.navigation-container ul li:nth-child(5).active ~ .indicator-button {
+  transform: translateX(calc(70px * 4));
+}
