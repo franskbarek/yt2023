@@ -1,23 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  min-height: 100vh;
-  background: #fff;
+  background-color: #fff;
   overflow: hidden;
 }
 
 span {
   position: absolute;
   pointer-events: none;
-
-  animation: animate 1s linear infinite;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  animation: floating 1s linear infinite;
 }
 
-@keyframes animate {
+@keyframes floating {
   0% {
     translate: 0 0;
     opacity: 0;
@@ -36,4 +33,44 @@ span {
     translate: 0 80px;
     opacity: 0;
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Kategori pupulars */
+span[data-category="populars"] {
+  background-color: #dbff57;
+  border-radius: 100%;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(255, 252, 87, 0.7);
+}
+/* Kategori fantasy */
+span[data-category="fantasy"] {
+  background-color: #b257ff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(178, 87, 255, 0.7);
+}
+
+/* Kategori travels */
+span[data-category="travels"] {
+  background-color: #00c2ff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 194, 255, 0.7);
+}
+
+/* Kategori animals */
+span[data-category="animals"] {
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(255, 107, 107, 0.7);
 }
