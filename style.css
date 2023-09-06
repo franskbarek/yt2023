@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.wrapper-wave {
+  position: relative;
+}
+
+.wrapper-wave h2 {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+}
+
+.wrapper-wave h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+.wrapper-wave h2:nth-child(2) {
+  color: #03a9f4;
+  animation: effect 4s ease-out infinite;
+}
+
+@keyframes effect {
+  0%,
+  100% {
+    -webkit-clip-path: polygon(0 100%, 15% 74%, 31% 77%, 44% 70%, 53% 59%, 67% 48%, 83% 44%, 100% 45%, 100% 100%, 0 100%);
+    clip-path: polygon(0 66%, 15% 74%, 31% 77%, 44% 70%, 53% 59%, 67% 48%, 83% 44%, 100% 45%, 100% 100%, 0 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0 48%, 16% 46%, 29% 49%, 44% 58%, 58% 70%, 73% 75%, 87% 69%, 100% 60%, 100% 100%, 0 100%);
+    clip-path: polygon(0 48%, 16% 46%, 29% 49%, 44% 58%, 58% 70%, 73% 75%, 87% 69%, 100% 60%, 100% 100%, 0 100%);
+  }
+}
